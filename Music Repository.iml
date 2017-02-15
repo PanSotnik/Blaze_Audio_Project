@@ -9,6 +9,7 @@
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/main/webapp" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -30,7 +31,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/webapp" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/webapp/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
@@ -112,7 +113,6 @@
     <orderEntry type="library" name="Maven: org.sonatype.sisu:sisu-inject-bean:1.4.2" level="project" />
     <orderEntry type="library" name="Maven: org.sonatype.sisu:sisu-guice:noaop:2.1.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:2.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-core:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-settings:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-settings-builder:3.0" level="project" />
@@ -135,5 +135,13 @@
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-compiler-api:2.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-compiler-manager:2.8.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.plexus:plexus-compiler-javac:2.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-jar-plugin:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-archiver:3.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-archiver:3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-io:2.7.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.11" level="project" />
+    <orderEntry type="library" name="Maven: org.iq80.snappy:snappy:0.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.tukaani:xz:1.5" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:3.0.24" level="project" />
   </component>
 </module>
