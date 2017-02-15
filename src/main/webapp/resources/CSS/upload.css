@@ -1,0 +1,291 @@
+body {
+    background-image: url("Flame.jpeg");
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.logo {
+    display: inline;
+    border:1px transparent;
+    border-radius: 19px;
+    position: relative;
+    top: -6px;
+    left: 84%;
+}
+
+
+.header {
+    position: relative;
+    background-color: #AD542C;
+    box-shadow: 0 5px 7px rgba(150, 95, 12, 0.8);
+    border-radius: 19px;
+    top: -75px;
+    width: 76%;
+}
+
+#filler {
+    position: absolute;
+    background-color: darkslateblue;
+    box-shadow: 0 5px 7px rgba(50, 30, 200, 0.8);
+    border-radius: 19px;
+    top: 0;
+    left: 77.1%;
+    height: 4em;
+    width: 5%;
+    margin-top: 0.5%;
+}
+
+#filler:hover {
+    background-color: rgb(50, 30, 200);
+}
+
+.helpicon {
+    display: block;
+    padding-top: 6%;
+    margin: auto;
+}
+
+.window_1 {
+    position: relative;
+    overflow: visible;
+    border: #AD542C solid thick;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 1.4em;
+    left: 28%;
+    border-radius: 19px;
+}
+
+
+
+label {
+    color: darkgoldenrod;
+    font-size: 1.3em;
+}
+
+.hello {
+    color: black;
+    font-size: 1em;
+}
+
+.upload {
+    position:  relative;
+    height: 40px;
+    width: 30%;
+    top: 12em;
+    left: 36%;
+    font-size: 24px;
+    color: darkgoldenrod;
+    padding-left: 5px;
+    background-color: #ad1b21;
+    box-shadow: 0 5px 7px rgba(150, 95, 12, 0.8);
+    border-radius: 19px;
+    opacity: .9;
+}
+
+.upload:hover {
+    opacity: 1;
+}
+
+.flare {
+    display: inline-block;
+    padding-top: -22px;
+}
+
+#play, #up {
+    position: relative;
+    top: .3em;
+    left: 86%;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#hello {
+    position: relative;
+    font-size: 1.2em;
+    left: 75%;
+    color: black;
+}
+
+.checkdiv {
+    position: relative;
+    top: 12.7em;
+    right: -20px;
+}
+
+.private {
+    position: relative;
+    left: 78%;
+}
+
+.privatelabel {
+    display: inline-block;
+    position: relative;
+    left: .5%;
+}
+
+.filediv {
+    color: darkgoldenrod;
+    position: relative;
+    top: 17.6em;
+    left:  5%;
+}
+
+.file {
+    left: 25px;
+}
+
+.filelabel {
+    position: relative;
+    left: 17px;
+}
+
+.albumlabel {
+    position: relative;
+    left: 25px;
+}
+
+.descriptiondiv {
+    position: relative;
+    top: 10.3em;
+}
+
+.description {
+    position: relative;
+    height: 45px;
+    width: 250px;
+    left: 24%;
+    border-radius: 10px;
+    top: 4em;
+    background-color: #ad1b21;
+}
+
+.desclabel {
+    position: relative;
+    bottom: 10px;
+    right: 105px;
+}
+
+.selectdiv {
+    position: relative;
+    top: 10.3em;
+}
+
+.genre {
+    position: relative;
+    left: 26em;
+    background-color: #ad1b21;
+}
+
+.yeardiv {
+    position: relative;
+    top: 8em;
+    right: 1em;
+}
+
+.year {
+    position: relative;
+    left: 39%;
+    background-color: #ad1b21;
+    color: darkgoldenrod;
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.yearlabel {
+    position: relative;
+    right: 2.5em;
+}
+
+.artistdiv {
+    position: relative;
+    top: 6em;
+    left: 36%;
+}
+
+.artistlabel {
+    position: relative;
+    right: 12em;
+}
+
+.titlediv {
+    position: relative;
+    top: 4em;
+    left: 36%;
+}
+
+.titlelabel {
+    position: relative;
+    right: 11.8em;
+}
+
+.title, .artist {
+    background-color: #ad1b21;
+    color: darkgoldenrod;
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+h1 {
+    position: relative;
+    display: inline;
+    color: darkgoldenrod;
+    font-size: 1.5em;
+    left: 17%;
+    top: 1.3em;
+}
+
+.hello {
+    cursor: pointer;
+}
+
+#exists, #success {
+    position: relative;
+    color: darkgoldenrod;
+    top: 13em;
+    left: 13em;
+}
+
+#error {
+    position: relative;
+    color: darkgoldenrod;
+    top: 13em;
+    left: .4em;
+}
+
+.dropdown {
+    position: relative;
+    top: -1em;
+    font-size: 1.2em;
+    left: 65%;
+    width: 20%;
+}
+
+.hello:hover, .hello:focus {
+    background-color: chocolate;
+    border-radius: 19px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 19px;
+    min-width: 160px;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: darkgoldenrod;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: darkred;
+}
+
+.show {
+    display:block;
+}

@@ -1,0 +1,128 @@
+.background {
+
+    position: fixed;
+    left: -2px;
+    top: 0;
+    z-index: 1;
+
+    display: block;
+    background-image: url("DSC09590.jpg");
+    width: 1674px;
+    height: 941px;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+
+}
+
+.content {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.logo {
+    display: inline;
+    border:1px transparent;
+    border-radius: 19px;
+    position: relative;
+    top: 2px;
+    left: 83.7%;
+}
+
+.header {
+    position: relative;
+    background-color: #AD542C;
+    box-shadow: 0 5px 7px rgba(150, 95, 12, 0.8);
+    border-radius: 19px;
+    top: -67px;
+    left: 0.4%;
+    width: 75.3%;
+}
+
+#filler {
+    position: absolute;
+    background-color: darkslateblue;
+    box-shadow: 0 5px 7px rgba(50, 30, 200, 0.8);
+    border-radius: 19px;
+    top: 0;
+    left: 77.1%;
+    height: 4em;
+    width: 5%;
+    margin-top: 0.5%;
+}
+
+#filler:hover {
+    background-color: rgb(50, 30, 200);
+}
+
+.helpicon {
+    display: block;
+    padding-top: 6%;
+    margin: auto;
+}
+
+.window-restore {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    border: #AD542C solid thick;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 18%;
+    margin: auto;
+    border-radius: 19px;
+}
+
+#label {
+    position: relative;
+    color: white;
+    left: 1em;
+}
+
+.email {
+    position: relative;
+    background-color: rgba(173, 27, 33, 0.5);
+    color: darkgoldenrod;
+    font-weight: bold;
+    padding-left: 8px;
+    top: 2.3em;
+    left: 1em;
+    width: 200px;
+}
+
+.send {
+    display: block;
+    margin: auto;
+    margin-top: 9%;
+    background-color: #ad1b21;
+    box-shadow: 0 5px 7px rgba(150, 95, 12, 0.8);
+    border-radius: 19px;
+    width: 20%;
+    font-size: 19px;
+    font-family: 'Bodoni MT Condensed', sans-serif;
+    padding-bottom: 5px;
+    color: darkgoldenrod;
+    padding-left: 5px;
+    opacity: .9;
+}
+
+.send:hover {
+    opacity: 1;
+}
+
+#success, #failure {
+    position: relative;
+    color: darkgoldenrod;
+    bottom: 7.1em;
+    left: 9.5em;
+}

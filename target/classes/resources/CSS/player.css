@@ -1,0 +1,285 @@
+body {
+    background-image: url("DSC09590.jpg");
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.logo {
+    display: inline;
+    border:1px transparent;
+    border-radius: 19px;
+    position: relative;
+    top: -6px;
+    left: 84%;
+}
+
+
+.header {
+    position: relative;
+    background-color: #AD542C;
+    box-shadow: 0 5px 7px rgba(150, 95, 12, 0.8);
+    border-radius: 19px;
+    top: -75px;
+    width: 76%;
+}
+
+#filler {
+    position: absolute;
+    background-color: darkslateblue;
+    box-shadow: 0 5px 7px rgba(50, 30, 200, 0.8);
+    border-radius: 19px;
+    top: 0;
+    left: 77.1%;
+    height: 4em;
+    width: 5%;
+    margin-top: 0.5%;
+}
+
+#filler:hover {
+    background-color: rgb(50, 30, 200);
+}
+
+.helpicon {
+    display: block;
+    padding-top: 6%;
+    margin: auto;
+}
+
+#play, #up {
+    position: relative;
+    top: .3em;
+    left: 86%;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.hello {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    top: -1em;
+    font-size: 1.2em;
+    left: 65%;
+    width: 15%;
+}
+
+.hello:hover, .hello:focus {
+    background-color: chocolate;
+    border-radius: 19px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(2, 13, 60, 0.8);
+    border-radius: 19px;
+    min-width: 160px;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: darkgoldenrod;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: darkred;
+}
+
+.show {
+    display:block;
+}
+
+
+.window {
+    display: block;
+    overflow: scroll;
+    position: relative;
+    border: #AD542C solid thick;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 1em;
+    margin: auto;
+    border-radius: 19px;
+}
+
+ul.tab {
+    display: table;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(2, 13, 60);
+}
+
+
+.tab li {
+    width: 5%;
+    display: table-cell;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+ul.tab li a {
+    display: inline-block;
+    color: #ad1b21;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+ul.tab li a:hover {
+    background-color: #b85b04;
+    border-radius: 19px;
+}
+
+
+ul.tab li a:focus, .active {
+    background-color: #b85b04;
+    border-radius: 19px;
+}
+
+
+.tabcontent {
+    position: relative;
+    display: none;
+    padding: 6px 12px;
+    color: #b85b04;
+    border-top: none;
+    left: 46%;
+}
+
+.view {
+    position: relative;
+    display: inline;
+    left: 31em;
+    top: -2.9em;
+    height: 2.5em;
+    width: 6em;
+    color: darkgoldenrod;
+    background-color: #ad1b21;
+    border-radius: 19px;
+    opacity: .9;
+}
+
+.view:hover{
+    opacity: 1;
+}
+
+.buttonlabel {
+    position: relative;
+    left: 21.1em;
+    top: -4.1em;
+}
+
+.shufflelabel {
+    position: relative;
+    bottom: 9.2em;
+    right: 35.2em;
+    display: block;
+    color: #AD542C;
+    font-size: small;
+}
+
+.repeat, .shuffle {
+    display: block;
+    position: relative;
+    right: 31em;
+    top: -6.19em;
+}
+
+.stop {
+    position: relative;
+    top: -6.9em;
+    right: 30.94em;
+}
+
+.repeat.selected, .shuffle:active, .stop:active {
+    background-color: #ad1b21;
+    border-radius: 19px;
+}
+
+.elements {
+    position: relative;
+    top: 12.1em;
+}
+
+#tracks {
+    position: relative;
+    display: block;
+    right: 28em;
+    bottom: 2em;
+    margin-bottom: -14.7%;
+}
+
+.trackinfo {
+    position: relative;
+    color: black;
+    right: 22.7em;
+    font-size: larger;
+    bottom: 5.2em;
+}
+
+.like, .desc {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-color: rgba(184, 91, 4, 0.8);
+    border-radius: 19px;
+    height: 5em;
+    right: 37em;
+    bottom: 9.3em;
+}
+
+.desc {
+    width: 40px;
+    right: 6.5em;
+    bottom: 14.5em;
+}
+
+.description {
+    position: relative;
+    bottom: 19.8em;
+    left: 1em;
+    width: 19em;
+    display: block;
+    visibility: hidden;
+    color: black;
+    background-color: rgba(184, 91, 4, 0.8);
+    border-radius: 19px;
+    overflow: scroll;
+    height: 5em;
+}
+
+.by {
+    position: relative;
+    bottom: 18em;
+    right: 18.7em;
+    color: black;
+}
+
+audio::-webkit-media-controls-panel {
+    height: 5em;
+    border-radius: 19px;
+    background-color: rgba(184, 91, 4, 0.8);
+    width: 30em;
+}
+
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: black;
+}
+
+ ::-webkit-scrollbar {
+     display: none;
+ }
