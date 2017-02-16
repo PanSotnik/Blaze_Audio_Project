@@ -18,11 +18,12 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     @Transactional(readOnly = true)
-    public Track[] findByGenre(Genre genre) { return trackRepository.findByGenre(genre); }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Track[] findByPrivateGenre(Genre genre, boolean isPrivate) { return trackRepository.findByPrivateGenre(genre, isPrivate); }
+    public Track[] findByPrivateGenre(Genre genre, boolean isPrivate) {
+        if (!isPrivate){
+            return trackRepository.findByGenreAll(genre);
+        }
+        return trackRepository.findByPrivateGenre(genre, isPrivate);
+    }
 
     @Override
     @Transactional(readOnly = true)

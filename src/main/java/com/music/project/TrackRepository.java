@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 public interface TrackRepository extends JpaRepository<Track, Long> {
 
     @Query("SELECT u FROM Track u where u.genre = :genre")
-    Track[] findByGenre(@Param("genre") Genre genre);
+    Track[] findByGenreAll(@Param("genre") Genre genre);
 
     @Query("SELECT u FROM Track u where u.genre = :genre and u.isPrivate = :isPrivate")
     Track[] findByPrivateGenre(@Param("genre") Genre genre, @Param("isPrivate") boolean isPrivate);

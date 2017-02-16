@@ -126,7 +126,6 @@ private void saveToDB(String title, String artist, String year, Genre genre, Str
             isPrivate = true;
         }
 
-        if (isPrivate) {
             model.addAttribute("blues", trackService.findByPrivateGenre(Genre.blues, isPrivate));
             model.addAttribute("classic", trackService.findByPrivateGenre(Genre.classic, isPrivate));
             model.addAttribute("country", trackService.findByPrivateGenre(Genre.country, isPrivate));
@@ -139,21 +138,7 @@ private void saveToDB(String title, String artist, String year, Genre genre, Str
             model.addAttribute("metal", trackService.findByPrivateGenre(Genre.metal, isPrivate));
             model.addAttribute("login", login);
             return "player";
-        }
 
-            model.addAttribute("blues", trackService.findByGenre(Genre.blues));
-            model.addAttribute("classic", trackService.findByGenre(Genre.classic));
-            model.addAttribute("country", trackService.findByGenre(Genre.country));
-            model.addAttribute("electronic", trackService.findByGenre(Genre.electronic));
-            model.addAttribute("hiphop", trackService.findByGenre(Genre.hiphop));
-            model.addAttribute("jazz", trackService.findByGenre(Genre.jazz));
-            model.addAttribute("pop", trackService.findByGenre(Genre.pop));
-            model.addAttribute("rap", trackService.findByGenre(Genre.rap));
-            model.addAttribute("rock", trackService.findByGenre(Genre.rock));
-            model.addAttribute("metal", trackService.findByGenre(Genre.metal));
-            model.addAttribute("login", login);
-
-        return "player";
 }
 
     @RequestMapping(value = "/increment", method = RequestMethod.GET)
