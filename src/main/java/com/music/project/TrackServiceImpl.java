@@ -21,8 +21,9 @@ public class TrackServiceImpl implements TrackService {
     public Track[] findByPrivateGenre(Genre genre, boolean isPrivate) {
         if (!isPrivate){
             return trackRepository.findByGenreAll(genre);
+        } else {
+            return trackRepository.findByPrivateGenre(genre);
         }
-        return trackRepository.findByPrivateGenre(genre, isPrivate);
     }
 
     @Override

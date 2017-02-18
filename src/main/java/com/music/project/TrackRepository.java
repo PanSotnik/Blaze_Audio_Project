@@ -9,8 +9,8 @@ public interface TrackRepository extends JpaRepository<Track, Long> {
     @Query("SELECT u FROM Track u where u.genre = :genre")
     Track[] findByGenreAll(@Param("genre") Genre genre);
 
-    @Query("SELECT u FROM Track u where u.genre = :genre and u.isPrivate = :isPrivate")
-    Track[] findByPrivateGenre(@Param("genre") Genre genre, @Param("isPrivate") boolean isPrivate);
+    @Query("SELECT u FROM Track u where u.genre = :genre and u.isPrivate = true")
+    Track[] findByPrivateGenre(@Param("genre") Genre genre);
 
     @Query("SELECT u FROM Track u where u.filename = :filename")
     Track returnTrack(@Param("filename") String filename);
