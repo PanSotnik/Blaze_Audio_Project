@@ -126,17 +126,13 @@ private void saveToDB(String title, String artist, String year, Genre genre, Str
             isPrivate = true;
         }
 
-            model.addAttribute("blues", trackService.findByPrivateGenre(Genre.blues, isPrivate));
-            model.addAttribute("classic", trackService.findByPrivateGenre(Genre.classic, isPrivate));
-            model.addAttribute("country", trackService.findByPrivateGenre(Genre.country, isPrivate));
-            model.addAttribute("electronic", trackService.findByPrivateGenre(Genre.electronic, isPrivate));
-            model.addAttribute("hiphop", trackService.findByPrivateGenre(Genre.hiphop, isPrivate));
-            model.addAttribute("jazz", trackService.findByPrivateGenre(Genre.jazz, isPrivate));
-            model.addAttribute("pop", trackService.findByPrivateGenre(Genre.pop, isPrivate));
-            model.addAttribute("rap", trackService.findByPrivateGenre(Genre.rap, isPrivate));
-            model.addAttribute("rock", trackService.findByPrivateGenre(Genre.rock, isPrivate));
-            model.addAttribute("metal", trackService.findByPrivateGenre(Genre.metal, isPrivate));
-            model.addAttribute("login", login);
+        String[] genres = {"blues", "classic", "country", "electronic", "hiphop", "jazz", "pop", "rap", "rock", "metal"};
+
+        for (String genre : genres){
+            model.addAttribute(genre, trackService.findByPrivateGenre(Genre.valueOf(genre), isPrivate));
+        }
+        model.addAttribute("login", login);
+
             return "player";
 
 }
