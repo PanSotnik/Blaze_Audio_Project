@@ -1,9 +1,9 @@
 package com.music.project;
 
-import org.springframework.stereotype.*;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@org.springframework.stereotype.Controller
+@Controller
 @RequestMapping("/login")
 public class LoginController {
     @RequestMapping

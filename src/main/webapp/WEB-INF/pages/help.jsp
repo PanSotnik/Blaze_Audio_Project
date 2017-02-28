@@ -12,12 +12,12 @@
 <body>
 
 <div class ="logo">
-    <img src="resources/Logo.png"  alt="BLAZEAUDIO">
+    <img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO">
 </div>
 
 <div class="header" style="height:60px;border:none;"></div>
 
-<div id="filler" style=border:none;> <a href="/help"><img src="/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
+<div id="filler" style=border:none;> <a href="/help"><img src="${pageContext.request.contextPath}/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
 
 <div class="window" style="height:400px;width:800px";>
 
@@ -31,7 +31,7 @@
     <form action="/signup">
         <c:choose>
             <c:when test="${empty login}">
-                <button class="signup"><span><img src ="/resources/flare.png" height="30" width="30">Sign up for BlazeAudio!</span></button>
+                <button class="signup"><span><img src ="${pageContext.request.contextPath}/resources/flare.png" height="30" width="30">Sign up for BlazeAudio!</span></button>
             </c:when>
             <c:otherwise>
             <p id="thanks">Thank you for already having signed up, ${login}!</p>

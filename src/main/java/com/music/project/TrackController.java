@@ -51,28 +51,28 @@ public class TrackController {
         }
 
         //String base = System.getProperty("user.dir") + "/src/main/webapp/resources/App_uploads/";
-        String base = System.getProperty("user.home") + "/App_uploads/";
+        String base = "C:\\App_uploads\\";
 
         switch (genre){
-            case blues: filePath = base + "blues/" + filename;
+            case blues: filePath = base + "blues\\" + filename;
                 break;
-            case classic: filePath = base + "classic/" + filename;
+            case classic: filePath = base + "classic\\" + filename;
                 break;
-            case country: filePath = base + "country/" + filename;
+            case country: filePath = base + "country\\" + filename;
                 break;
-            case electronic: filePath = base + "electronic/" + filename;
+            case electronic: filePath = base + "electronic\\" + filename;
                 break;
-            case hiphop: filePath = base + "hiphop/" + filename;
+            case hiphop: filePath = base + "hiphop\\" + filename;
                 break;
-            case jazz: filePath = base + "jazz/" + filename;
+            case jazz: filePath = base + "jazz\\" + filename;
                 break;
-            case pop: filePath = base + "pop/" + filename;
+            case pop: filePath = base + "pop\\" + filename;
                 break;
-            case rap: filePath = base + "rap/" + filename;
+            case rap: filePath = base + "rap\\" + filename;
                 break;
-            case rock: filePath = base + "rock/" + filename;
+            case rock: filePath = base + "rock\\" + filename;
                 break;
-            case metal: filePath = base + "metal/" + filename;
+            case metal: filePath = base + "metal\\" + filename;
                 break;
         }
 

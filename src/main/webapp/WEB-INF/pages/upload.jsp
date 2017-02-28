@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<div class ="logo"><img src="resources/Logo.png"  alt="BLAZEAUDIO"></div>
+<div class ="logo"><img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO"></div>
 
-<div class="header" style="height:60px;border:none;"><a href="/play"><img src="/resources/play.png" height="50" width="50" id="play"></a><a href="/upload"><img src="/resources/upload.png" height="50" width="50" id="up"></a>
+<div class="header" style="height:60px;border:none;"><a href="/play"><img src="${pageContext.request.contextPath}/resources/play.png" height="50" width="50" id="play"></a><a href="/upload"><img src="${pageContext.request.contextPath}/resources/upload.png" height="50" width="50" id="up"></a>
 
 
     <div class="dropdown">
@@ -25,7 +25,7 @@
 
 </div>
 
-<div id="filler" style=border:none;><a href="/help"><img src="resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
+<div id="filler" style=border:none;><a href="/help"><img src="${pageContext.request.contextPath}resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
 
 <div class="window_1" style="height:620px;width:500px";>
 
@@ -80,7 +80,7 @@
         </div>
 
 
-        <button class="upload" type="submit"> <img src="resources/flare.png" height="25" width="25" class="flare">Upload</button>
+        <button class="upload" type="submit"> <img src="${pageContext.request.contextPath}/resources/flare.png" height="25" width="25" class="flare">Upload</button>
 
         <c:if test="${exists ne null}">
             <p id="exists">Track already part of the database!</p>

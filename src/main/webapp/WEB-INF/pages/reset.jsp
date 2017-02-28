@@ -12,12 +12,12 @@
 <body>
 
 <div class ="logo">
-    <img src="/resources/Logo.png"  alt="BLAZEAUDIO">
+    <img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO">
 </div>
 
 <div class="header" style="height:60px;border:none;"></div>
 
-<div id="filler" style=border:none;> <a href="/help"><img src="/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
+<div id="filler" style=border:none;> <a href="/help"><img src="${pageContext.request.contextPath}/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
 
 <div class="window-reset" style="height: 300px; width: 500px">
 

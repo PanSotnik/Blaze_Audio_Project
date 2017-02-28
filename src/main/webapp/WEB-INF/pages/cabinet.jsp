@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<div class ="logo"><img src="resources/Logo.png"  alt="BLAZEAUDIO"></div>
+<div class ="logo"><img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO"></div>
 
-<div class="header" style="height:60px;border:none;"><a href="/play"><img src="/resources/play.png" height="50" width="50" id="play"></a><a href="/upload"><img src="/resources/upload.png" height="50" width="50" id="up"></a>
+<div class="header" style="height:60px;border:none;"><a href="/play"><img src="${pageContext.request.contextPath}/resources/play.png" height="50" width="50" id="play"></a><a href="/upload"><img src="${pageContext.request.contextPath}/resources/upload.png" height="50" width="50" id="up"></a>
 
     <div class="dropdown">
         <label onclick="dropdown()" class="hello">Hello, ${login}</label>
@@ -25,7 +25,7 @@
 </div>
 
 
-<div id="filler" style=border:none;> <a href="/help"><img src="/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
+<div id="filler" style=border:none;> <a href="/help"><img src="${pageContext.request.contextPath}/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
 
 <div class="window_1" style="height:600px;width:500px";>
 
@@ -47,7 +47,7 @@
     <div class="genre" id="genre">${music}</div>
 
     <form action="/edit">
-        <button type="submit" class="edit" name="edit">Edit</button>
+        <button class="edit" name="edit">Edit</button>
     </form>
 
 

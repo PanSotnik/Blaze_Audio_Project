@@ -13,14 +13,14 @@
 
 <div class="content">
     <div class ="logo">
-        <img src="/resources/Logo.png"  alt="BLAZEAUDIO">
+        <img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO">
     </div>
 
     <div
             class="header" style="height:60px;border:none;">
     </div>
 
-    <div id="filler" style=border:none;> <a href="/help"><img src="/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
+    <div id="filler" style=border:none;> <a href="/help"><img src="${pageContext.request.contextPath}/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
 
     <div class="window-register" style="height: 400px; width: 500px;">
 
@@ -62,7 +62,7 @@
                     <label class="labelname" for="name">Your name</label>
                 </div>
 
-                <button class="signup" type="submit"><span><img src ="/resources/flare.png" height="30" width="30">Sign up!</span></button>
+                <button class="signup" type="submit"><span><img src ="${pageContext.request.contextPath}/resources/flare.png" height="30" width="30">Sign up!</span></button>
             </div>
             <c:if test="${exists ne null}">
                 <p id="exists">User already exists or email taken!</p>

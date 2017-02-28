@@ -39,14 +39,6 @@ $('.repeat').on('click', function(){
     $(this).toggleClass('selected');
 });
 
-/*function viewDescription(event) {
-    var description = document.getElementsByTagName('textarea');
-    for(i=0; i<description.length; i++)
-        if (description[i].style.visibility = 'hidden'){
-        event.target.style.visibility = 'visible';
-        }
-}*/
-
 function toggleDescription(){
     $("textarea").each(function(){
         var elem = this;
@@ -55,6 +47,7 @@ function toggleDescription(){
 
 
 var audios = document.getElementsByTagName('audio');
+var previous = 0;
 
 //Button finds and pauses current playing track
 function masterPause() {
@@ -74,9 +67,13 @@ document.addEventListener('play', function(e){
 function random() {
     try {
         var list = audios.length;
-        var randomNum = Math.ceil(Math.random()*list);
+        var randomNum = Math.ceil(Math.random() * list - 1);
+        if (randomNum == previous) {
+            random();
+        }
         audios[randomNum].play();
-    } catch(TypeError) {
+        previous = randomNum;
+    } catch (TypeError){
         random();
     }
 }

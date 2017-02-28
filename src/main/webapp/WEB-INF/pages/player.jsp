@@ -10,9 +10,9 @@
 </head>
 <body>
 
-<div class ="logo"><img src="/resources/Logo.png"  alt="BLAZEAUDIO"></div>
+<div class ="logo"><img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO"></div>
 
-<div class="header" style="height:60px;border:none;"><a href="/play"><img src="/resources/play.png" height="50" width="50" id="play"></a><a href="/upload"><img src="/resources/upload.png" height="50" width="50" id="up"></a>
+<div class="header" style="height:60px;border:none;"><a href="/play"><img src="${pageContext.request.contextPath}/resources/play.png" height="50" width="50" id="play"></a><a href="/upload"><img src="${pageContext.request.contextPath}/resources/upload.png" height="50" width="50" id="up"></a>
 
     <div class="dropdown">
         <label onclick="dropdown()" class="hello">Hello, ${login}</label>
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div id="filler" style=border:none;> <a href="/help"><img src="/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
+<div id="filler" style=border:none;> <a href="/help"><img src="${pageContext.request.contextPath}/resources/Help.png" class="helpicon" width="50" height="50" alt="Help"></a></div>
 
 <div class="window" style="height:40em;width:70em">
 
@@ -49,10 +49,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${blues}" var="blues">
 
@@ -78,14 +78,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/blues/${blues.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/blues/${blues.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${blues.artist} - ${blues.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${blues.filename}"><img src="/resources/like.png">${blues.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${blues.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${blues.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${blues.year} &#13;&#10; User's info: ${blues.description}</textarea>
                         <label class="by">By: ${blues.userString}</label>
                     </div>
@@ -102,10 +102,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${classic}" var="classic">
 
@@ -128,14 +128,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/classic/${classic.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/classic/${classic.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${classic.artist} - ${classic.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${classic.filename}"><img src="/resources/like.png">${classic.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${classic.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${classic.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${classic.year} &#13;&#10; User's info: ${classic.description}</textarea>
                         <label class="by">By: ${classic.userString}</label>
                     </div>
@@ -152,10 +152,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${country}" var="country">
 
@@ -178,14 +178,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/country/${country.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/country/${country.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${country.artist} - ${country.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${country.filename}"><img src="/resources/like.png">${country.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${country.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${country.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${country.year} &#13;&#10; User's info: ${country.description}</textarea>
                         <label class="by">By: ${country.userString}</label>
                     </div>
@@ -202,10 +202,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${electronic}" var="electronic">
 
@@ -228,14 +228,15 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/electronic/${electronic.filename}" type="audio/mp3"></audio>
+
+                    <audio controls id="tracks"> <source src="/electronic/${electronic.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${electronic.artist} - ${electronic.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${electronic.filename}"><img src="/resources/like.png">${electronic.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${electronic.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${electronic.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${electronic.year} &#13;&#10; User's info: ${electronic.description}</textarea>
                         <label class="by">By: ${electronic.userString}</label>
                     </div>
@@ -252,10 +253,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${hiphop}" var="hiphop">
 
@@ -278,14 +279,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/hiphop/${hiphop.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/hiphop/${hiphop.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${hiphop.artist} - ${hiphop.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${hiphop.filename}"><img src="/resources/like.png">${hiphop.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${hiphop.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${hiphop.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${hiphop.year} &#13;&#10; User's info: ${hiphop.description}</textarea>
                         <label class="by">By: ${hiphop.userString}</label>
                     </div>
@@ -302,10 +303,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${jazz}" var="jazz">
 
@@ -328,14 +329,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/jazz/${jazz.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/jazz/${jazz.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${jazz.artist} - ${jazz.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${jazz.filename}"><img src="/resources/like.png">${jazz.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${jazz.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${jazz.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${jazz.year} &#13;&#10; User's info: ${jazz.description}</textarea>
                         <label class="by">By: ${jazz.userString}</label>
                     </div>
@@ -352,10 +353,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${pop}" var="pop">
 
@@ -378,14 +379,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/pop/${pop.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/pop/${pop.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${pop.artist} - ${pop.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${pop.filename}"><img src="/resources/like.png">${pop.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${pop.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${pop.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${pop.year} &#13;&#10; User's info: ${pop.description}</textarea>
                         <label class="by">By: ${pop.userString}</label>
                     </div>
@@ -402,10 +403,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${rap}" var="rap">
 
@@ -428,14 +429,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/rap/${rap.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/rap/${rap.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${rap.artist} - ${rap.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${rap.filename}"><img src="/resources/like.png">${rap.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${rap.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${rap.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${rap.year} &#13;&#10; User's info: ${rap.description}</textarea>
                         <label class="by">By: ${rap.userString}</label>
                     </div>
@@ -452,10 +453,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${rock}" var="rock">
 
@@ -478,14 +479,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/rock/${rock.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/rock/${rock.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${rock.artist} - ${rock.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${rock.filename}"><img src="/resources/like.png">${rock.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${rock.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${rock.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${rock.year} &#13;&#10; User's info: ${rock.description}</textarea>
                         <label class="by">By: ${rock.userString}</label>
                     </div>
@@ -503,10 +504,10 @@
             <button class="view" type="submit" name="makePrivate" value="no">All</button>
         </form>
         <label class="buttonlabel">View by:</label>
-        <img src="/resources/repeat.png" class="repeat" onclick="loop()">
-        <img src="/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
+        <img src="${pageContext.request.contextPath}/resources/repeat.png" class="repeat" onclick="loop()">
+        <img src="${pageContext.request.contextPath}/resources/shuffle.png" class="shuffle" id="shuffle" onclick="random()">
         <label class="shufflelabel" for="shuffle">(Random from library)</label>
-        <img src="/resources/stop.png" class="stop" onclick="masterPause()">
+        <img src="${pageContext.request.contextPath}/resources/stop.png" class="stop" onclick="masterPause()">
 
         <c:forEach items="${metal}" var="metal">
 
@@ -529,14 +530,14 @@
                 </c:when>
                 <c:otherwise>
 
-                    <audio controls id="tracks"> <source src="/resources/App_uploads/metal/${metal.filename}" type="audio/mp3"></audio>
+                    <audio controls id="tracks"> <source src="/metal/${metal.filename}" type="audio/mp3"> </audio>
 
                     <div class="elements">
                         <label class="trackinfo">${metal.artist} - ${metal.title}</label>
                         <form action="/increment">
-                            <button class="like" type="submit" name="trackName" value="${metal.filename}"><img src="/resources/like.png">${metal.likes}</button>
+                            <button class="like" type="submit" name="trackName" value="${metal.filename}"><img src="${pageContext.request.contextPath}/resources/like.png">${metal.likes}</button>
                         </form>
-                        <button class="desc" onclick="toggleDescription()"><img src="/resources/diary.png"></button>
+                        <button class="desc" onclick="toggleDescription()"><img src="${pageContext.request.contextPath}/resources/diary.png"></button>
                         <textarea class="description" readonly> Year: ${metal.year} &#13;&#10; User's info: ${metal.description}</textarea>
                         <label class="by">By: ${metal.userString}</label>
                     </div>
