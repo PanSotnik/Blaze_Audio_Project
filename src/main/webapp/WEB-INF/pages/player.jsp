@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class ="logo"><img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO"></div>
+<div class ="logo"><a href="/"><img src="${pageContext.request.contextPath}/resources/Logo.png" alt="BLAZEAUDIO"></a></div>
 
 <div class="header" style="height:60px;border:none;"><a href="/play"><img src="${pageContext.request.contextPath}/resources/play.png" height="50" width="50" id="play"></a><a href="/upload"><img src="${pageContext.request.contextPath}/resources/upload.png" height="50" width="50" id="up"></a>
 

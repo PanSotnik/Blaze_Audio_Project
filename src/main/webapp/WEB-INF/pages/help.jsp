@@ -11,9 +11,7 @@
 </head>
 <body>
 
-<div class ="logo">
-    <img src="${pageContext.request.contextPath}/resources/Logo.png"  alt="BLAZEAUDIO">
-</div>
+<div class ="logo"><a href="/"><img src="${pageContext.request.contextPath}/resources/Logo.png" alt="BLAZEAUDIO"></a></div>
 
 <div class="header" style="height:60px;border:none;"></div>
 

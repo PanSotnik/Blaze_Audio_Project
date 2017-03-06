@@ -18,7 +18,7 @@
 
 
     <div class="window_1" style="height:400px;width:300px";>
-z
+
         <form action="/signup">
         <button class="signup"><span><img src ="${pageContext.request.contextPath}/resources/flare.png" height="30" width="30">Sign up for BlazeAudio!</span></button>
         </form>

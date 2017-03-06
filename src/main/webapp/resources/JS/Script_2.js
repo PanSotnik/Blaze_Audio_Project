@@ -71,8 +71,8 @@ function random() {
         if (randomNum == previous) {
             random();
         }
-        audios[randomNum].play();
         previous = randomNum;
+        audios[randomNum].play();
     } catch (TypeError){
         random();
     }
