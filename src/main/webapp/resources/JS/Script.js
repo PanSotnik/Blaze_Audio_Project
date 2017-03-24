@@ -17,12 +17,18 @@ function CheckPasswordMatch() {
     var $password = $("#pass").val();
     var $confirmPassword = $("#confirm").val();
 
-    if ($password !== $confirmPassword){
-        $("#divCheckPasswordMatch").html("Passwords do not match!");
-        $("#send").prop("disabled", true);
-    }else {
+    //Prevent user from receiving mismatch notification if has not begun typing in confirm pass text box
+    if ($confirmPassword !== '') {
+
+        if ($password !== $confirmPassword){
+            $("#divCheckPasswordMatch").html("Passwords do not match!");
+            $("#send").prop("disabled", true);
+        } else {
+            $("#divCheckPasswordMatch").html("");
+            $("#send").prop("disabled", false);
+        }
+    } else {
         $("#divCheckPasswordMatch").html("");
-        $("#send").prop("disabled", false);
     }
 }
 
