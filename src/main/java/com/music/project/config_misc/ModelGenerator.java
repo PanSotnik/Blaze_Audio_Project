@@ -26,8 +26,6 @@ public class ModelGenerator {
 
         AppUser dbAppUser = userService.getUserByLogin(login);
 
-        System.out.println(login);
-
         models.put("login", login);
         models.put("roles", user.getAuthorities());
         models.put("email", dbAppUser.getEmail());
