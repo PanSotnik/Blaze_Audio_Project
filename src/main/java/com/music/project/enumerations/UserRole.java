@@ -1,4 +1,4 @@
-package com.music.project;
+package com.music.project.enumerations;
 
 
 public enum UserRole {

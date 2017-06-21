@@ -1,5 +1,8 @@
-package com.music.project;
+package com.music.project.controllers;
 
+import com.music.project.enumerations.Genre;
+import com.music.project.entities.Track;
+import com.music.project.services.TrackService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
@@ -24,6 +27,7 @@ public class TrackController {
     @Autowired
     private TrackService trackService;
 
+    //Called any time user login is needed
     private void userData(){
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         login = user.getUsername();

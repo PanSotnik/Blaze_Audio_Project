@@ -1,5 +1,7 @@
-package com.music.project;
+package com.music.project.controllers;
 
+import com.music.project.entities.AppUser;
+import com.music.project.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;

@@ -1,4 +1,4 @@
-package com.music.project;
+package com.music.project.config_misc;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

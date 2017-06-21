@@ -1,4 +1,7 @@
-package com.music.project;
+package com.music.project.entities;
+
+import com.music.project.enumerations.UserGender;
+import com.music.project.enumerations.UserRole;
 
 import javax.persistence.*;
 import java.util.Date;

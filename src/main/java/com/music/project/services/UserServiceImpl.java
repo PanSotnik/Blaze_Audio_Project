@@ -1,6 +1,8 @@
-package com.music.project;
+package com.music.project.services;
 
 
+import com.music.project.repositories.UserRepository;
+import com.music.project.entities.AppUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

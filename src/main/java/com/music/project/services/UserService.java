@@ -1,4 +1,6 @@
-package com.music.project;
+package com.music.project.services;
+
+import com.music.project.entities.AppUser;
 
 public interface UserService {
 

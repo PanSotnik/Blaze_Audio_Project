@@ -1,5 +1,6 @@
-package com.music.project;
+package com.music.project.repositories;
 
+import com.music.project.entities.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

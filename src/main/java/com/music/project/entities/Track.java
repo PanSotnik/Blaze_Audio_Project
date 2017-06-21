@@ -1,5 +1,7 @@
-package com.music.project;
+package com.music.project.entities;
 
+
+import com.music.project.enumerations.Genre;
 
 import javax.persistence.*;
 import java.util.ArrayList;

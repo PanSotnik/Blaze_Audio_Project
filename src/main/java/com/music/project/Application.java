@@ -1,5 +1,8 @@
 package com.music.project;
 
+import com.music.project.entities.AppUser;
+import com.music.project.enumerations.UserRole;
+import com.music.project.services.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
